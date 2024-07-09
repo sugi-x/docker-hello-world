@@ -4,10 +4,10 @@ steps:
     args: ['build', '-t', 
            'asia-southeast2-docker.pkg.dev/${PROJECT_ID}/hello-app-repo:$SHORT_SHA', 
            '.']
-           
+
   # Docker Push
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 
-           'us-central1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/myimage']
+           'asia-southeast2-docker.pkg.dev/${PROJECT_ID}/hello-app-repo:$SHORT_SHA']
 options:
   logging: CLOUD_LOGGING_ONLY
