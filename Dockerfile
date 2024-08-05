@@ -1,3 +1,3 @@
 FROM node:14-alpine
 COPY . .
-CMD ["node", "index.js"]
+CMD ["node", "api.js"]
